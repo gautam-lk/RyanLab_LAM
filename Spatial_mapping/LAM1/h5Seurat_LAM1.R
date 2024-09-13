@@ -1,3 +1,5 @@
+##HD5 Seurat Object for Azimuth analysis
+
 
 library(Seurat)
 library(SeuratData)
@@ -5,8 +7,7 @@ library(SeuratDisk)
 library(SeuratObject)
 
 
-
-##HD5 Seurat Object Saving Sc_LAMCore
+## Load Object
 LAM1_Spatial <- readRDS("spatial_data.RDS")
 
 
