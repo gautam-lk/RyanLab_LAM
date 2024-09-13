@@ -47,7 +47,7 @@ head(vis_coords)
 write.table(vis_coords, 'spatial/tissue_positions.csv', quote=FALSE, row.names=FALSE, sep=',')
 
 # Load Visium data directly from Space Ranger output directory
-VisiumData<-read.VisiumSpatialRNA("C:/Users/lgautam/Documents/LAMDATA/07222024/Azimuth/LAM2")
+VisiumData<-read.VisiumSpatialRNA("....../LAM2")
 
 # Create a list of barcodes from the column names of the count matrix
 barcodes <- colnames(VisiumData@counts)
