@@ -1,4 +1,4 @@
-LAM2data <- readRDS("LAM2/spatial_data.RDS")
+LAM2data <- readRDS(".../LAM2/spatial_data.RDS")
 
 Idents(LAM2data) <- "seurat_clusters"  # The default cluster identity
 
