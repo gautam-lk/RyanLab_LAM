@@ -13,8 +13,8 @@ library(limma) # optional
 options(Seurat.object.assay.version = "v3")
 
 # Set path for saving data
-data_path <- "C:/Users/lgautam/Documents/LAMDATA/07222024/Spatial_analysis/LAM2/"
-fig_path <- "C:/Users/lgautam/Documents/LAMDATA/07222024/Spatial_analysis/LAM2/"
+data_path <- "........./LAM2/"
+fig_path <- "........../LAM2/"
 
 
 # Convenience functions
@@ -45,7 +45,7 @@ ReadObject <- function(name){
 ####Spatial Analysis starts here
 #### Analysis used the the RDS filed saved for each LAM sections
 
-LAM2data <- readRDS("spatial_data.RDS")
+LAM2data <- readRDS(".../LAM2/spatial_data.RDS")
 spatial_data <- NormalizeData(LAM2data)
 spatial_data <- ScaleData(spatial_data)
 
@@ -192,5 +192,5 @@ DoHeatmap(
   group.bar.height = 0.02,
   combine = TRUE
 )
-#Source : https://yu-tong-wang.github.io/talk/sc_st_data_analysis_R.html#download-one-10x-genomics-visium-dataset-and-load-it-into-seurat
+#Code ends here..
 
