@@ -49,7 +49,7 @@ ReadObject <- function(name){
 
 
 #Read/Load Data
-LAM2_Spatial_data <- readRDS("C:/Users/lgautam/Documents/LAMDATA/New_Folder/LAM2_spat/spatial_data.RDS")
+LAM2_Spatial_data <- readRDS(".../LAM2/spatial_data.RDS")
 
 
 #####Subclustering  ### Cluster6
