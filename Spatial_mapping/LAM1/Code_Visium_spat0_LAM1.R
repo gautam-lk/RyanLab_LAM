@@ -12,8 +12,8 @@ library(limma) # optional
 options(Seurat.object.assay.version = "v3")
 
 # Set path for saving data
-data_path <- "C:/Users/lgautam/Documents/LAMDATA/07222024/Spatial_analysis/LAM1/"
-fig_path <- "C:/Users/lgautam/Documents/LAMDATA/07222024/Spatial_analysis/LAM1/"
+data_path <- "........../LAM1/"
+fig_path <- ".........../LAM1/"
 
 
 # Convenience functions
@@ -151,5 +151,5 @@ DoHeatmap(
   group.bar.height = 0.02,
   combine = TRUE
 )
-#Source : https://yu-tong-wang.github.io/talk/sc_st_data_analysis_R.html#download-one-10x-genomics-visium-dataset-and-load-it-into-seurat
+#Codes Ends here
 
