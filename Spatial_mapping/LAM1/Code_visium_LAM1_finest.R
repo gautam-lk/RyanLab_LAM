@@ -1,10 +1,3 @@
-#https://www.10xgenomics.com/resources/analysis-guides/integrating-10x-visium-and-chromium-data-with-r
-#library(Seurat)
-#library(SeuratObject)
-#library(dplyr)
-#library(Seurat)
-#library(patchwork)
-
 
 getwd()
 library(Seurat)
@@ -51,7 +44,7 @@ head(vis_coords)
 write.table(vis_coords, 'spatial/tissue_positions.csv', quote=FALSE, row.names=FALSE, sep=',')
 
 # Load Visium data directly from Space Ranger output directory
-VisiumData<-read.VisiumSpatialRNA("C:/Users/lgautam/Documents/LAMDATA/07222024/Azimuth/LAM1")
+VisiumData<-read.VisiumSpatialRNA(".........../LAM1")
 
 # Create a list of barcodes from the column names of the count matrix
 barcodes <- colnames(VisiumData@counts)
@@ -260,3 +253,4 @@ for(i in 1:length(cell_types_2_5)){
   ggsave(paste(resultsdir, cell_type_names[i],'_weights_2_5.jpg', sep=''), height=5, width=5, units='in', dpi=300)
 }
 #Code Ends here##
+#Reference : https://www.10xgenomics.com/resources/analysis-guides/integrating-10x-visium-and-chromium-data-with-r
