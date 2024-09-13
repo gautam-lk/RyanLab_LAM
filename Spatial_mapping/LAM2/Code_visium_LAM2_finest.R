@@ -1,4 +1,4 @@
-#https://www.10xgenomics.com/resources/analysis-guides/integrating-10x-visium-and-chromium-data-with-r
+
 #library(Seurat)
 #library(SeuratObject)
 #library(dplyr)
@@ -20,10 +20,6 @@ LAM2.data <- Read10X_h5("LAM2_filt_feat_bc_matrix.h5")
 
 
 library(ggplot2) #for saving result plots
-
-
-
-
 
 
 #########################
@@ -63,7 +59,6 @@ plot_puck_continuous(puck=VisiumData, barcodes=barcodes, plot_val=VisiumData@nUM
                      title='plot of nUMI') 
 
 
-
 # Load single cell data from Cell Ranger output directory
 Counts<-Read10X_h5("LAM2_filt_feat_bc_matrix.h5")
 
@@ -98,19 +93,13 @@ cell_types[cell_types == "P_DCs"] <- "Plasma_CD8_P_DCs"
 cell_types[cell_types == "AT1"] <- "AT1_AT2"
 cell_types[cell_types == "AT2"] <- "AT1_AT2"
 
-
-
 cell_types[cell_types == "SM"] <- "AF_AdF_SM_PF"
 cell_types[cell_types == "AF"] <- "AF_AdF_SM_PF"
 cell_types[cell_types == "PF"] <- "AF_AdF_SM_PF"
 cell_types[cell_types == "AdF"] <- "AF_AdF_SM_PF"
 
-
-
 cell_types_filter <- cell_types[cell_types$predicted.ann_finest_level.score >= 0.5 & cell_types$mapping.score >=0.5, ]
 table(cell_types_filter$predicted.ann_finest_level)
-
-
 
 
 #head(cell_types)
@@ -121,9 +110,6 @@ cell_types <- setNames(cell_types_filter[[2]], cell_types_filter[[1]])
 # Convert to factor data type
 cell_types <- as.factor(cell_types) 
 head(cell_types)
-
-
-#There were errors in the cell type 
 
 
 #Step 7c: Create nUMI object
@@ -269,3 +255,4 @@ for(i in 1:length(cell_types_2_5)){
   ggsave(paste(resultsdir, cell_type_names[i],'_weights_2_5.jpg', sep=''), height=5, width=5, units='in', dpi=300)
 }
 #Code Ends here##
+#Reference: ttps://www.10xgenomics.com/resources/analysis-guides/integrating-10x-visium-and-chromium-data-with-r
